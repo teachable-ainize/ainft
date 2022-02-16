@@ -14,8 +14,8 @@ const getAddress = (hash, signature) => {
 		ainUtil.pubToAddress(publicKey, publicKey.length === 65)));
 }
 
-const verifySignature = (tx, sig, addr) => {
-	return ainUtil.ecVerifySig(tx, sig, addr);
+const verifySignature = (tx, sig, addr, chainId) => {
+	return ainUtil.ecVerifySig(tx, sig, addr, chainId);
 }
 
 module.exports = {
