@@ -111,7 +111,7 @@ app.post('/chat', async (req, res) => {
     const txHash = getTransactionHash(transactionData);
     try {
         const sigAddr = getAddress(txHash, signature);
-        if (!verifySignature(transactionData, signature, sigAddr)) {
+        if (!verifySignature(transactionData, signature, sigAddr, chainId)) {
             res.status(401).json(`Invalid transaction or signature : ${JSON.stringify(req.body)}`)
             return;
         }
