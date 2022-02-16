@@ -24,7 +24,7 @@ const ainizeInternalPrivateKey = process.env.AINIZE_INTERNAL_PRIVATE_KEY;
 const generationEndPoint = `${endpoint}/predictions/text-generation`;
 const healthCheckEndPoint = `${endpoint}/ping`;
 
-const chainId = providerURL.includes('mainnet') ? 1 : 0
+const chainId = providerURL.includes('mainnet') ? 0 : 1
 const ain = new Ain(providerURL, chainId);
 const ainAddress = Ain.utils.toChecksumAddress(ain.wallet.add(ainizeInternalPrivateKey));
 ain.wallet.setDefaultAccount(ainAddress);
