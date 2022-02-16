@@ -53,7 +53,7 @@ setInterval(async () => {
         if (queue.length === 0)
             return;
         const {signature, transactionData, botResponse} = queue.shift();
-        const req = await ain.sendSignedTransaction(signature, transactionData);
+        const req = await ain.sendSignedTransaction(signature, transactionData, chainId);
         console.log(`Request Log: ${JSON.stringify(req)}`);
         const ref = transactionData.operation.ref;
         const responseRef = ref.split('/').slice(0, -1).concat('response').join('/');
