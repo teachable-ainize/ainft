@@ -1,6 +1,6 @@
 # AINFT
 
-Auto-generated github repository by Ainize Teachable AINFT.
+Auto-generated github repository by [Ainize Teachable AINFT](https://ainize.ai/teachable-nft).
 
 If you want to know more about Teachable-AINFT, visit the site below.
 * https://github.com/ainize-team/AINFTs
